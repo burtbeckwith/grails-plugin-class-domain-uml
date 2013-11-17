@@ -5,26 +5,18 @@ import org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass
 class ClassDomainUMLController {
 
     def index() {
-        /*
-            package foo2 <<Rect>> {
-              class Class2
-            }
-            println model.getShortName()
-            println model.getPackageName()
-            println model.getFullName()
-        */
         def packages = [:]
         def relations = []
-        // Generamos lista de paquetes y clases que lo contienen
+        // List of packages and classes
         for (model in grailsApplication.domainClasses) {
             if (!packages[model.getPackageName()]) packages[model.getPackageName()] = []
             packages[model.getPackageName()].add(model)
         }
         String uml = ""
-        // Iteramos paquetes
+        // Packages
         for (p in packages) {
             uml += "package " + p.getKey() + " <<Rect>> {\n"
-            // Iteramos sobre las clases de cada paquete
+            // Each model of package
             for(model in p.getValue()) {
                 def c = grailsApplication.classLoader.loadClass("${model.fullName}")
                 def instance = new DefaultGrailsDomainClass(c)
@@ -70,11 +62,6 @@ legend left
 endlegend
 """
         
-        //print uml
-        
-        //render "<img src=""http://www.plantuml.com/plantuml/img" + compressAndEncodeString("Q->R") + " />";
-        //render "Vamos bien: " + ClassDomainUMLService.testMethod()
-        
         render "<img src='http://www.plantuml.com/plantuml/img/${compressAndEncodeString(uml)}' />"
         
     }
@@ -82,11 +69,9 @@ endlegend
     def compressAndEncodeString(String str) {
         byte[] xmlBytes = str.getBytes("UTF-8");
 
-        //net.sourceforge.plantuml.code.CompressionZlib compress = new net.sourceforge.plantuml.code.CompressionZlib()
         com.nafiux.grails.classdomainuml.CompressionZlib compress = new com.nafiux.grails.classdomainuml.CompressionZlib()
         byte[] compressed = compress.compress(xmlBytes)
 
-        //net.sourceforge.plantuml.code.AsciiEncoder ascii = new net.sourceforge.plantuml.code.AsciiEncoder()
         com.nafiux.grails.classdomainuml.AsciiEncoder ascii = new com.nafiux.grails.classdomainuml.AsciiEncoder()
 
         return ascii.encode(compressed)
