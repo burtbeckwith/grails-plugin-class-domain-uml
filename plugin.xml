@@ -1,0 +1,11 @@
+<plugin name='class-domain-uml' version='0.1' grailsVersion='2.0 &gt; *'>
+  <author>Your name</author>
+  <title>Class Domain UML Plugin</title>
+  <description>Brief summary/description of the plugin.
+</description>
+  <documentation>http://grails.org/plugin/class-domain-uml</documentation>
+  <type>ClassDomainUMLGrailsPlugin</type>
+  <resources>
+    <resource>com.nafiux.grails.classdomainuml.ClassDomainUMLController</resource>
+  </resources>
+</plugin>
