@@ -13,3 +13,6 @@ Run your app and navigate to `http://localhost:8080/yourApp/classDomainUML`
 
 ## Screenshots
 
+### Example 1
+
+![Example 1](web-app/images/class-domain-uml-screenshot-1.png)
