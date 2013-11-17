@@ -5,6 +5,8 @@ Automagically create a UML diagram from all your domain classes of your Grails a
 
 Version 0.1.5 - Powered by [Nafiux](http://www.nafiux.com)
 
+Waiting validation into http://grails.org/plugins/pending/227
+
 ## Features
 
 * Classes whitin packages
