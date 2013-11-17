@@ -4,15 +4,33 @@
   <groupId>org.grails.plugins</groupId>
   <artifactId>class-domain-uml</artifactId>
   <packaging>zip</packaging>
-  <version>0.1</version>
+  <version>0.1.5</version>
   <name>Class Domain UML Plugin</name>
-  <description>Brief summary/description of the plugin.
+  <description>Automagically create a UML diagram from all your domain classes of your Grails app.
 </description>
   <url>http://grails.org/plugin/class-domain-uml</url>
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <organization>
+    <name>Nafiux</name>
+    <url>http://www.nafiux.com/</url>
+  </organization>
   <developers>
     <developer>
-      <name>Your name</name>
+      <name>Ignacio Ocampo Millan</name>
+      <email>nafiux@gmail.com</email>
     </developer>
   </developers>
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://github.com/nafiux/grais-plugin-class-domain-uml/issues</url>
+  </issueManagement>
+  <scm>
+    <url>https://github.com/nafiux/grais-plugin-class-domain-uml</url>
+  </scm>
   <dependencies />
 </project>
