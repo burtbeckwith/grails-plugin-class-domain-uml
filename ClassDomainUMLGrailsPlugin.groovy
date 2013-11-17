@@ -2,7 +2,7 @@ class ClassDomainUMLGrailsPlugin {
     def version = "0.1.5"
     def grailsVersion = "2.0 > *"
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "web-app/**"
     ]
 
     def title = "Class Domain UML Plugin"
