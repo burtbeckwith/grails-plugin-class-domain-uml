@@ -57,8 +57,7 @@ class ClassDomainUMLController {
 title ${grailsApplication.metadata.'app.name'} - ${grailsApplication.metadata.'app.version'}
 legend left
   Powered by Nafiux (nafiux.com)
-  <b>Author: </b>Ignacio Ocampo
-  Grails version: Grails: ${grailsApplication.metadata.'app.grails.version'}
+  Grails version: ${grailsApplication.metadata.'app.grails.version'}
 endlegend
 """
         
